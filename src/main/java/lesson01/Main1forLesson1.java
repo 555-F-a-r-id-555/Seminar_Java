@@ -1,4 +1,4 @@
-package lesson1;
+package lesson01;
 import java.util.Scanner;
 public class Main1forLesson1 {
     public static void main(String[] args) {

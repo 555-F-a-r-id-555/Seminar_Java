@@ -1,10 +1,8 @@
-package lesson1;
+package lesson01;
 
 import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Main2 {
+public class Main02 {
     public static void main(String[] args) {
         /*Дан массив nums = [3,2,2,3] и число val = 3.
         Если в массиве есть числа, равные заданному,
