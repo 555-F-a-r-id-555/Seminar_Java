@@ -85,7 +85,7 @@ public class Main01v02_DZ {
 
     public static List<Integer> RemoveEvenNumbers(List<Integer> list) {
 
-        List<Integer> newList = new LinkedList<Integer>(list);
+        LinkedList<Integer> newList = new LinkedList<Integer>(list);
         long srartTime = System.currentTimeMillis();
         Iterator<Integer> iterator = newList.iterator();
         while (iterator.hasNext()) {
@@ -100,7 +100,7 @@ public class Main01v02_DZ {
         System.out.println(newList);
 
 
-        List<Integer> newList2 = new ArrayList<Integer>(list);
+        ArrayList<Integer> newList2 = new ArrayList<Integer>(list);
         long startTime2 = System.currentTimeMillis();
         Iterator<Integer> iterator2 = newList2.iterator();
         while (iterator2.hasNext()) {
@@ -117,11 +117,13 @@ public class Main01v02_DZ {
         System.out.println("Операция коллекции LinkedList выполнена за: " + resTime + "ms");
         System.out.println("Операция коллекции ArrayList выполнена за: " + resTime2 + "ms");
 
-        if (resTime2 < resTime) System.out.println("ArrayList < LinkedList на величину: " + (resTime - resTime2));
-        else System.out.println("LinkedList < ArrayList на величину: " + (resTime2 - resTime));
+        if (resTime2 < resTime) {
+            System.out.println("ArrayList < LinkedList на величину: " + (resTime - resTime2));
+        } else if (resTime2 > resTime) {
+            System.out.println("LinkedList < ArrayList на величину: " + (resTime2 - resTime));
+        } else System.out.println("LinkedList = ArrayList на величину: " + (resTime2 - resTime));
 
 
         return newList;
     }
-
 }
