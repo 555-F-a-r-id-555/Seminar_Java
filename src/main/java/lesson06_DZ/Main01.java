@@ -24,10 +24,12 @@ public class Main01 {
         N3.setObjectName("N3");
         Notebook N4 = new Notebook(12.0, 4, 8, "black");
         N4.setObjectName("N4");
+        Notebook N5 = new Notebook(17.0, 16, 16, "pink");
+        N5.setObjectName("N5");
 
         List<Notebook> list = new ArrayList<>();
 
-        Collections.addAll(list, N1, N2, N3, N4);
+        Collections.addAll(list, N1, N2, N3, N4, N5);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -50,7 +52,7 @@ public class Main01 {
                     (scannerRam == -1 || elem.getRAM().equals(scannerRam)) &&
                     (scannerScreen == -1 || elem.getScreen().equals(scannerScreen)) &&
                     (scannerColor.equals("-1") || elem.getColor().equals(scannerColor))) {
-                System.out.print(elem.getObjectName() + " ");
+                System.out.println(elem.getObjectName() + " => " + elem.getCPU() + " CPU; " + elem.getRAM() + " RAM; " + elem.getScreen() + " Screen; " + elem.getColor() + " Color; ");
                 foundMatch = true;
             }
         }
