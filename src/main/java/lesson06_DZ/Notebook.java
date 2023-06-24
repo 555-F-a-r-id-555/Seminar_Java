@@ -11,7 +11,7 @@ public class Notebook {
     private String objectName;
 
     public Notebook(Double screen, Integer CPU, Integer RAM, String color) {
-        Screen = screen;
+        this.Screen = screen;
         this.CPU = CPU;
         this.RAM = RAM;
         this.color = color;
