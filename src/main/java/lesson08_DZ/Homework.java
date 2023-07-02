@@ -108,7 +108,7 @@ public class Homework {
         Neutral neutra5 = new Neutral(120);
         neutra5.setCurrentHealthPoint(-105);
 
-        System.out.println("Neutral: ");
+        System.out.println("Neutral5: ");
         neutra5.showIndicator();
 
 
