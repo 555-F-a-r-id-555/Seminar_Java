@@ -11,7 +11,7 @@ public class Box {
         this.weight = weight;
     }
 
-    public Integer getWeight() {
+    public int getWeight() {
         return weight;
     }
 
