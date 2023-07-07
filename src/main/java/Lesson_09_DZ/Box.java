@@ -3,11 +3,11 @@ package Lesson_09_DZ;
 public class Box {
     private int weight;
 
-    public Box(Integer weight) {
+    public Box(int weight) {
         this.weight = weight;
     }
 
-    public void setWeight(Integer weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
