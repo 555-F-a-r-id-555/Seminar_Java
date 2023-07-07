@@ -1,0 +1,12 @@
+package Lesson_09_test.lesson1.practic;
+
+public class Apple extends Fruit{
+    public Apple(Long id, int cost, String color) {
+        super(id, cost, color);
+    }
+
+/*    @Override
+    protected String foo() {
+        return "Яблоко";
+    }*/
+}
