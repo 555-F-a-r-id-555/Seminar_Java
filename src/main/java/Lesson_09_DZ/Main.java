@@ -38,7 +38,7 @@ public class Main {
         container2.addBox(box5);
 
 
-        System.out.println("---------------Певый контейнер--------------------");
+        System.out.println("\n★★★★★★★★★★★★Певый контейнер★★★★★★★★★★★★\n");
         Iterator<Integer> containerIterator1 = container1.iterator();
 
         System.out.print("\"Container1\": ");
@@ -48,18 +48,37 @@ public class Main {
         System.out.println();
         System.out.println("\"SUMBOX1\": " + container1.sumBox());
 
-        System.out.println("----------------Второй контейнер-----------------");
+        System.out.println("\n★★★★★★★★★★★★Второй контейнер★★★★★★★★★★★★\n");
         Iterator<Integer> containerIterator2 = container2.iterator();
 
-        System.out.print("\"Container1\": ");
+        System.out.print("\"Container2\": ");
         while (containerIterator2.hasNext()) {
             System.out.print(containerIterator2.next() + " ");
         }
         System.out.println();
-        System.out.println("\"SUMBOX1\": " + container2.sumBox());
+        System.out.println("\"SUMBOX2\": " + container2.sumBox());
 
-        System.out.println("--------------Сравнение по весу-----------------");
-        System.out.println(container1.compareTo(container2));
+        System.out.println("\n★★★★★★★★★★★★Сравнение по весу★★★★★★★★★★★\n");
+
+        int comparisonToResult = container1.compareTo(container2);
+        if (comparisonToResult > 0) {
+            System.out.println("container1:" + container1.sumBox() + " > " + "container2:" + container2.sumBox());
+        } else if (comparisonToResult < 0) {
+            System.out.println("container1:" + container1.sumBox() + " < " + "container2:" + container2.sumBox());
+        } else {
+            System.out.println("container1:" + container1.sumBox() + " == " + "container2:" + container2.sumBox());
+        }
+
+        System.out.println("\n★★★★★★★★★★★★Сравнение по количеству★★★★★\n");
+        ContainerCountComparator comparator = new ContainerCountComparator();
+        int comparisonResult = comparator.compare(container1, container2);
+        if (comparisonResult > 0) {
+            System.out.println("container1:" + container1.sizeContainer() + " > " + "container2:" + container2.sizeContainer());
+        } else if (comparisonResult < 0) {
+            System.out.println("container1:" + container1.sizeContainer() + " < " + "container2:" + container2.sizeContainer());
+        } else {
+            System.out.println("container1:" + container1.sizeContainer() + " == " + "container2:" + container2.sizeContainer());
+        }
 
 
 //        System.out.println("--------------------------Сравнение по количеству----------------------------");
@@ -73,16 +92,7 @@ public class Main {
 //            System.out.println("container1:" + container1.sizeContainer() + " == " + "container2:" + container2.sizeContainer());
 
 
-        System.out.println("----------------Сравнение по количеству-----------------");
-        ContainerCountComparator comparator = new ContainerCountComparator();
-        int comparisonResult = comparator.compare(container1, container2);
-        if (comparisonResult > 0) {
-            System.out.println("container1:" + container1.sizeContainer() + " > " + "container2:" + container2.sizeContainer());
-        } else if (comparisonResult < 0) {
-            System.out.println("container1:" + container1.sizeContainer() + " < " + "container2:" + container2.sizeContainer());
-        } else {
-            System.out.println("container1:" + container1.sizeContainer() + " == " + "container2:" + container2.sizeContainer());
-        }
+
 
     }
 }

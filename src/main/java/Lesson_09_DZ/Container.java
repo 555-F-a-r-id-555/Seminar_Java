@@ -54,10 +54,11 @@ public class Container implements Iterable<Integer>, Iterator<Integer>, Comparab
 
     @Override
     public int compareTo(Container o) {
-        Integer weight = (Integer) this.sumBox();
-        if (weight > o.sumBox()) return 1;
+        int weight = this.sumBox();
+        return Integer.compare(weight, o.sumBox());
+        /*if (weight > o.sumBox()) return 1;
         if (weight < o.sumBox()) return -1;
-        return 0;
+        return 0;*/
     }
 }
 

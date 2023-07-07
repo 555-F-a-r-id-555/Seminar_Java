@@ -1,7 +1,7 @@
 package Lesson_09_DZ;
 
 public class Box {
-    private Integer weight;
+    private int weight;
 
     public Box(Integer weight) {
         this.weight = weight;
