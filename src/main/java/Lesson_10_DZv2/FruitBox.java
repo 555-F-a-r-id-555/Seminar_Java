@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class FruitBox<T extends Fruit>  implements Iterable<T>, Iterator<T> {
+public class FruitBox<T extends Fruit> implements Iterable<T>, Iterator<T> {
 
     private List<T> fruits;
 

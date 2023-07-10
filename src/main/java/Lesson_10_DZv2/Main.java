@@ -26,8 +26,7 @@ public class Main {
         Orange orange3 = new Orange(3);
 
 
-
-        FruitBox<Fruit> fruitBox1  = new FruitBox<>();
+        FruitBox<Fruit> fruitBox1 = new FruitBox<>();
         System.out.println(fruitBox1);
 
         fruitBox1.addFruits(apple1);
@@ -35,11 +34,11 @@ public class Main {
         fruitBox1.addFruits(apple3);
         fruitBox1.addFruits(apple4);
         fruitBox1.addFruits(apple5);
-        System.out.println("Added Apple, AppleWeight = " +fruitBox1.getWeight());
+        System.out.println("Added Apple, AppleWeight = " + fruitBox1.getWeight());
         fruitBox1.addFruits(goldenApple1);
         fruitBox1.addFruits(goldenApple2);
         fruitBox1.addFruits(goldenApple3);
-        System.out.println("Added goldenApple, goldenAppleWeight + AppleWeight = " +fruitBox1.getWeight());
+        System.out.println("Added goldenApple, goldenAppleWeight + AppleWeight = " + fruitBox1.getWeight());
         fruitBox1.addFruits(orange1);
         fruitBox1.addFruits(orange2);
         fruitBox1.addFruits(orange3);
@@ -57,17 +56,7 @@ public class Main {
         System.out.println("Исходный FuitBox1 после удаления: " + fruitBox1);
 
 
-
-
-
     }
-
-
-
-
-
-
-
 
 
 }
