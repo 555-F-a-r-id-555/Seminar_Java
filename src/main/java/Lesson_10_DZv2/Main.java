@@ -47,15 +47,46 @@ public class Main {
         System.out.println(fruitBox1);
         System.out.println("----------------------");
         System.out.println("WEIGHT = " + fruitBox1.getWeight());
-        System.out.println("----------------------");
 
-        CopyandRemove<Fruit> copyandRemove = new CopyandRemove<>();
-        FruitBox<Fruit> newbox = copyandRemove.copyAndRemove(fruitBox1);
 
-        System.out.println("Новый FuitBox1: " + newbox);
+        System.out.println("---------Вариант 1------------");
+//        CopyandRemove<Fruit> copyandRemove = new CopyandRemove<>();
+//        FruitBox<Fruit> newbox = copyandRemove.copyAndRemove(fruitBox1);
+//
+//        System.out.println("Новый FuitBox1: " + newbox);
+//        System.out.println("Исходный FuitBox1 после удаления: " + fruitBox1);
+
+        System.out.println("--------Вариант 2 - это статика-------------");
+        // это как тест, лучше не делать
+
+//        FruitBox<Fruit> newbox2 = copyAndRemove2(fruitBox1);
+
+//        System.out.println("Новый FuitBox1: " + newbox2);
+//        System.out.println("Исходный FuitBox1 после удаления: " + fruitBox1);
+
+        System.out.println("--------Вариант 3 - это внутрри класса FruitBox--------------");
+
+        FruitBox<Fruit> newbox3 = fruitBox1.copyAndRemove3(fruitBox1);
+
+        System.out.println("Новый FuitBox1: " + newbox3);
         System.out.println("Исходный FuitBox1 после удаления: " + fruitBox1);
 
+        System.out.println("----------------------");
 
+
+    }
+
+
+    public static FruitBox copyAndRemove2(FruitBox<Fruit> sourceBox) {
+        FruitBox<Fruit> newBox = new FruitBox<>();
+
+        for (Fruit fruit : sourceBox) {
+            newBox.addFruits(fruit);
+        }
+
+        sourceBox.clear(sourceBox);
+
+        return newBox;
     }
 
 

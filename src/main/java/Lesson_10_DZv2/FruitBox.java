@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class FruitBox<T extends Fruit> implements Iterable<T>, Iterator<T> {
+public class FruitBox<T extends Fruit>  implements Iterable<T>, Iterator<T> {
 
     private List<T> fruits;
 
@@ -75,4 +75,15 @@ public class FruitBox<T extends Fruit> implements Iterable<T>, Iterator<T> {
         box.getFruits().clear();
     }
 
+    public FruitBox copyAndRemove3(FruitBox<T> sourceBox) {
+        FruitBox<T> newBox = new FruitBox<>();
+
+        for (T fruit : sourceBox) {
+            newBox.addFruits(fruit);
+        }
+
+        sourceBox.clear(sourceBox);
+
+        return newBox;
+    }
 }
