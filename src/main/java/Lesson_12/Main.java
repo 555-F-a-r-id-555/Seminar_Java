@@ -127,50 +127,6 @@ public class Main {
         } while (t);
 
 
-//        UniversityApp universityApp = new UniversityApp();
-//        System.out.println(universityApp.GetNum());
-//
-//
-//        Boolean t = true;
-//        while (t) {
-//            universityApp = new UniversityApp();
-//            System.out.println(universityApp.GetNum());
-//            switch (universityApp.GetNum()) {
-//                case 1:
-//                    view.sendOnConsole();
-//                    t = false;
-//                    break;
-//                case 2:
-//                    view.sendOnConsole(SortType.NAME);
-//                    t = false;
-//                    break;
-//                case 4:
-//                    view.create(new StringBuilder().append(universityApp.getString1()[1].split("_")[0]).append(" " + universityApp.getString1()[1].split("_")[1]).toString(), Integer.parseInt(universityApp.getString1()[2]), " ", universityApp.getString1()[3]);
-//                    view.sendOnConsole();
-//                    t = false;
-//                    break;
-//                case 5:
-//                    teacherView.removeUser(universityApp.getString_1().split("_")[0] + " " + universityApp.getString_1().split("_")[1]);
-//                    teacherView.sendOnConsole();
-//                    t = false;
-//                    break;
-//                case 6:
-//                    groupView.printAllFromGroup(universityApp.getString_1());
-//                    t = false;
-//                    break;
-//                case 7:
-//                    groupView.printAllFromGroup(universityApp.getString_2());
-//                    t = false;
-//                    break;
-//                default:
-//                    break;
-//
-//            }
-//        }
-
-
-
-
 //        groupView.printAllFromGroup("11Б");
 
 //        teacherView.sendOnConsole();
@@ -204,11 +160,5 @@ public class Main {
         GroupController groupController = new GroupController(groupService);
         return new GroupView(groupController);
     }
-
-//    private static GroupView getGroupViewandId() {
-//        GroupService studentserv = new GroupService(studentService, teacherService);
-//        GroupController groupController2 = new GroupController(studentserv);
-//        return new GroupView(groupController);
-//    }
 
 }
